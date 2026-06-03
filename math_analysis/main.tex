@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper,oneside]{report}
+
+% --- Кодировки и языки ---
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+% --- Математика и шрифты ---
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{mathtools}
+\usepackage{microtype} 
+
+% --- Геометрия страницы ---
+\usepackage[left=1.0cm,right=1.0cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+% --- Графика ---
+\usepackage{graphicx}
+
+% --- Ссылки и цвета ---
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=cyan]{hyperref}
+
+% --- Рамки ---
+\usepackage[most]{tcolorbox} 
+
+% --- Команда для билетов ---
+\newcommand{\examquestion}[3]{
+    \refstepcounter{section}
+    \addcontentsline{toc}{section}{Вопрос #1. #2}
+    \vspace{1.5em}
+    \begin{tcolorbox}[
+        enhanced, breakable, 
+        colback=white, colframe=black, coltext=black,
+        boxrule=0.5pt, arc=0pt, 
+        borderline={0.5pt}{0pt}{black, dashed}
+    ]
+    {\Large\bfseries Вопрос #1. #2}\par\vspace{0.5em}
+    {\small\itshape #3}
+    \end{tcolorbox}
+    \vspace{0.5em}
+}
+
+% --- Теоремы и прочее ---
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{property}{Свойство}
+\newtheorem{example}{Пример}
+
+% --- Метаданные ---
+\title{
+    \centering
+    \Huge\bfseries Конспект по математическому анализу \\[0.5em]
+    \vspace{7em}
+    \includegraphics[width=0.5\textwidth]{cat.png} 
+}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle 
+
+\tableofcontents
+\newpage
+
+% Дальше файлы вопросов
+\include{p1}
+\include{p2}
+%\include{p3}
+
+\end{document}
