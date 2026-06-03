@@ -1,0 +1,15 @@
+
+!.tex
+!.pdf
+!.md
+!.gitignore
+
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
