@@ -25,7 +25,7 @@
 \usepackage{fancyhdr}
 \usepackage{datetime}
 
-% --- Команда для билетов ---
+% --- Команда для билетов (МОДИФИЦИРОВАННАЯ) ---
 \newcommand{\examquestion}[3]{
     \refstepcounter{section}
     \addcontentsline{toc}{section}{Вопрос #1. #2}
@@ -36,7 +36,9 @@
         boxrule=0.5pt, arc=0pt, 
         borderline={0.5pt}{0pt}{black, dashed}
     ]
-    {\Large\bfseries Вопрос #1. #2}\par\vspace{0.5em}
+    % Картинка bee.png вставляется очень мелко, выравнивается по центру строки 
+    % и отделяется от текста небольшим горизонтальным пробелом \hspace
+    {\Large\bfseries $\vcenter{\hbox{\includegraphics[height=0.8em]{bee.png}}}$ \hspace{0.1em} Вопрос #1. #2}\par\vspace{0.5em}
     {\small\itshape #3}
     \end{tcolorbox}
     \vspace{0.5em}
@@ -56,9 +58,8 @@
     \centering
     \Huge\bfseries Конспект по математическому анализу \\[0.5em]
     \vspace{1em}
-    {\footnotesize\normalfont v. \ifnum\day<10 0\fi\the\day/\ifnum\month<10 0\fi\the\month \ \currenttime} \\[0.5em] 
-    \vspace{5em}
-    \includegraphics[width=0.5\textwidth]{cat.png} 
+    {\footnotesize\normalfont v. \ifnum\day<10 0\fi\the\day/\ifnum\month<10 0\fi\the\month \ \currenttime} \\[0.5em]
+    \includegraphics[width=0.7\textwidth]{cat.png}
 }
 \author{}
 \date{
@@ -78,5 +79,6 @@
 \include{p3}
 \include{p4}
 \include{p5}
+\include{p6}
 
 \end{document}
