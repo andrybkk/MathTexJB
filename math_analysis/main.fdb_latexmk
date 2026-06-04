@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1780584853.55931 "/Users/mzalk/Documents/MATH_TEX/MathTexJB/math_analysis/main.tex" "main.pdf" "main" 1780584857.05395 0
-  "/Users/mzalk/Documents/MATH_TEX/MathTexJB/math_analysis/main.tex" 1780579501.61947 2155 91f0d81a6556865c02008878fbe800a9 ""
+["pdflatex"] 1780591339.10626 "/Users/mzalk/Documents/MATH_TEX/MathTexJB/math_analysis/main.tex" "main.pdf" "main" 1780591342.79966 0
+  "/Users/mzalk/Documents/MATH_TEX/MathTexJB/math_analysis/main.tex" 1780589137.73365 2168 c4d4dd5dd0b9675fa1517a33e1c48248 ""
   "/Users/mzalk/Library/texlive/2026/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1779729941.00489 3304 6a543c07045572737981351171e0505e ""
   "/Users/mzalk/Library/texlive/2026/texmf-var/fonts/tfm/lh/lh-t2a/labx2488.tfm" 1780503786.22196 3304 10c1a71cb294f8a8339c46823bcc15f2 ""
   "/Users/mzalk/Library/texlive/2026/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1779729936.43578 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
@@ -257,16 +257,18 @@
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
   "cat.png" 1780514074.2993 269712 75e1daf410cc8a17605609c970ab9c79 ""
   "darbu.png" 1780580048.60744 1191810 e9a4cd0c56d70b8d137807fdc9655667 ""
-  "main.aux" 1780584856.80764 349 6b62a3d49bd394502ebcec755dad0da7 "pdflatex"
-  "main.out" 1780584856.81119 6758 4f14102b6cbf8d2d3775843545fc31a8 "pdflatex"
-  "main.tex" 1780579501.61947 2155 91f0d81a6556865c02008878fbe800a9 ""
-  "main.toc" 1780584856.81153 7925 dde86e4ca3b93cb335514a0263c5b7c1 "pdflatex"
-  "p1.aux" 1780584855.29464 4646 8aa5e1df88274befcdf3e84847d9cf6c "pdflatex"
+  "main.aux" 1780591342.54766 365 3c9e87697a317ab7c6c08b1c3bc89902 "pdflatex"
+  "main.out" 1780591342.55203 8954 9dbb68c06fb1bc007dc00d3a1d95872d "pdflatex"
+  "main.tex" 1780589137.73365 2168 c4d4dd5dd0b9675fa1517a33e1c48248 ""
+  "main.toc" 1780591342.55238 10316 684c0d1e6d845bbba1aad3b34af3cc87 "pdflatex"
+  "p1.aux" 1780591340.81229 4646 8aa5e1df88274befcdf3e84847d9cf6c "pdflatex"
   "p1.tex" 1780530065.50533 31757 c400a38d5a90ca4786608b644489d9e5 ""
-  "p2.aux" 1780584856.00229 4368 13884de773d17e725d287f1268e9547b "pdflatex"
+  "p2.aux" 1780591341.52111 4368 13884de773d17e725d287f1268e9547b "pdflatex"
   "p2.tex" 1780584454.15506 27830 bfc5c3b1c76c1d1e1d3595ee0e13c73d ""
-  "p3.aux" 1780584856.80719 4732 431af25a3626ef540daf45eb568061cf "pdflatex"
-  "p3.tex" 1780584849.71078 27931 b5f755e0b488469081c543f247d9cb5f ""
+  "p3.aux" 1780591342.33244 4732 431af25a3626ef540daf45eb568061cf "pdflatex"
+  "p3.tex" 1780584915.4295 27931 b5f755e0b488469081c543f247d9cb5f ""
+  "p4.aux" 1780591342.54716 4328 e697c91199e2a585aa79f536af393802 "pdflatex"
+  "p4.tex" 1780591335.1449 19216 c26e883a1b4f5459c335b303bcbc6758 ""
   "riman.png" 1780530065.52881 593048 5a02c1504517db74d80b60573e79dfe8 ""
   (generated)
   "main.aux"
@@ -277,4 +279,5 @@
   "p1.aux"
   "p2.aux"
   "p3.aux"
+  "p4.aux"
   (rewritten before read)
