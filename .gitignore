@@ -12,4 +12,4 @@
 *.blg
 *.synctex.gz
 *.fls
-*.fdb_latexmk
+*.fdb_latexmk.DS_Store

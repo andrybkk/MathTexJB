@@ -56,7 +56,6 @@
     \centering
     \Huge\bfseries Конспект по математическому анализу \\[0.5em]
     \vspace{1em}
-    % Делаем маленький шрифт и прописываем формат v. DD/MM HH:MM
     {\footnotesize\normalfont v. \ifnum\day<10 0\fi\the\day/\ifnum\month<10 0\fi\the\month \ \currenttime} \\[0.5em] 
     \vspace{5em}
     \includegraphics[width=0.5\textwidth]{cat.png} 
@@ -64,7 +63,6 @@
 \author{}
 \date{
     \vspace{\fill}
-    % Символ & обязательно экранируется как \&
     {\scriptsize ITMO SE y29. Rzhonsnicskaya J.B. \& Gonchar L.I. course. \\[0.5em] "Every person with higher education must go through a BEE" \\[0.5em]}
 }
 
@@ -75,9 +73,8 @@
 \tableofcontents
 \newpage
 
-% Дальше файлы вопросов
 \include{p1}
 \include{p2}
-%\include{p3}
+\include{p3}
 
 \end{document}
