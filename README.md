@@ -2,7 +2,7 @@
  
 **Matan_tasks.pdf** - tasks
 
-**Minimum.pdf** - tasks
+**Minimum.pdf** - min
 
 check it out
 
