@@ -25,6 +25,16 @@ $$ \lim_{\Delta x \to 0} \Delta \Phi = 0 $$
 Приращение функции стремится к нулю при стремлении приращения аргумента к нулю. Непрерывность доказана.
 \end{proof}
 
+
+% --- Для Вопроса 21 (Интеграл с переменным верхним пределом) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем:} \\
+\textbf{Тезис:} Функция $\Phi(x) = \int_a^x f(t)dt$ непрерывна, если $f(t)$ ограничена ($|f| \le M$). \\
+\textbf{Ход:} Записываем приращение $\Delta \Phi = \int_a^{x+\Delta x} - \int_a^x = \int_x^{x+\Delta x} f(t)dt$. \\
+\textbf{Трюк:} Оцениваем модуль: $|\Delta \Phi| \le \int_x^{x+\Delta x} |f(t)| dt \le M \cdot |\Delta x|$. \\
+\textbf{Финал:} При $\Delta x \to 0$ получаем $M|\Delta x| \to 0 \implies \lim \Delta \Phi = 0$. Непрерывность доказана.
+\end{tcolorbox}
+
 % -----------------------------------------------------
 
 \examquestion{22}{Теорема Барроу о производной интеграла по верхнему пределу}
@@ -47,6 +57,14 @@ $$ \Phi'(x) = \lim_{\Delta x \to 0} \frac{\Delta \Phi}{\Delta x} = \lim_{\Delta 
 5. Итог: $\Phi'(x) = f(x)$.
 \end{proof}
 
+% --- Для Вопроса 22 (Теорема Барроу) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем:} \\
+\textbf{Тезис:} Если $f(t)$ непрерывна в $x$, то $\Phi'(x) = f(x)$. Скорость роста площади равна функции. \\
+\textbf{Ход:} Приращение $\Delta \Phi = \int_x^{x+\Delta x} f(t)dt$. По 1-й теореме о среднем $\Delta \Phi = f(\xi)\Delta x$, где $\xi \in [x, x+\Delta x]$. \\
+\textbf{Трюк:} Ищем производную: $\Phi'(x) = \lim_{\Delta x \to 0} \frac{f(\xi)\Delta x}{\Delta x} = \lim_{\Delta x \to 0} f(\xi)$. \\
+\textbf{Финал:} При $\Delta x \to 0$ отрезок стягивается, $\xi \to x$. Из-за непрерывности $\lim f(\xi) = f(x)$. Итог: $\Phi'(x) = f(x)$.
+\end{tcolorbox}
 
 
 % --- Вопрос 23 ---
@@ -89,7 +107,14 @@ $$ \lim_{x \to 0} \frac{\int_0^{x^2} \sin(\sqrt{t}) dt}{x^3} $$
 $$ \frac{d}{dx} \int_0^{x^2} \sin(\sqrt{t}) dt = \sin(\sqrt{x^2}) \cdot (x^2)' = \sin(|x|) \cdot 2x \xrightarrow{x \to 0^+} 2x \sin(x) $$
 3. \textbf{Вычисление предела:} Собираем отношение производных и используем первый замечательный предел ($\frac{\sin(x)}{x} \to 1$):
 $$ \lim_{x \to 0} \frac{2x \sin(x)}{3x^2} = \lim_{x \to 0} \left( \frac{2}{3} \cdot \frac{\sin(x)}{x} \right) = \frac{2}{3} \cdot 1 = \frac{2}{3} $$
-
+% --- Для Вопроса 23 (Лопиталь и Барроу) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем:} \\
+\textbf{Тезис:} Раскрытие $0/0$ через Лопиталя с производной интеграла $F'(x) = f(b(x))b'(x) - f(a(x))a'(x)$. \\
+\textbf{Ход:} Интеграл $\int_{a(x)}^{b(x)}$ разбиваем точкой $C$ на два куска: $\int_C^{b(x)} - \int_C^{a(x)}$. \\
+\textbf{Трюк:} По правилу сложной функции берем производную: внешняя (Барроу) на внутреннюю (производная границы). \\
+\textbf{Финал:} Проверяем $0/0$, непрерывность $f(t)$, производную знаменателя $\neq 0$. Подставляем Лейбница в предел отношения производных.
+\end{tcolorbox}
 
 
 
@@ -117,8 +142,14 @@ $$ \int_a^b f(x)dx = F(b) - F(a) $$
 Теорема доказана.
 \end{proof}
 
-
-
+% --- Для Вопроса 24 (Теорема Ньютона-Лейбница) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем:} \\
+\textbf{Тезис:} Основная теорема матанализа: $\int_a^b f(x)dx = F(b) - F(a)$. \\
+\textbf{Ход:} По Барроу $\Phi(x) = \int_a^x f(t)dt$ — это одна из первообразных. Любая другая $F(x) = \Phi(x) + C$. \\
+\textbf{Трюк:} Подставляем $x = a$: $F(a) = \int_a^a f(t)dt + C = 0 + C \implies C = F(a)$. \\
+\textbf{Финал:} Подставляем $x = b$: $F(b) = \int_a^b f(t)dt + F(a)$. Переносим $F(a)$ и получаем готовую формулу.
+\end{tcolorbox}
 
 
 % --- Вопрос 25 ---
@@ -217,3 +248,12 @@ $$ \lim_{\lambda \to 0} (S(T) - s(T)) = 0 $$
 $$ S(D) = \int_{\alpha}^{\beta} \frac{1}{2} \rho^2(\varphi) d\varphi $$
 Выносим константу $\frac{1}{2}$ за знак интеграла:
 $$ S(D) = \frac{1}{2} \int_{\alpha}^{\beta} \rho^2(\varphi) d\varphi $$
+
+% --- Для Вопроса 25 (Вычисление площади в полярных координатах) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем:} \\
+\textbf{Тезис:} Криволинейный сектор квадрируем, его площадь $S = \frac{1}{2} \int_{\alpha}^{\beta} \rho^2(\varphi) d\varphi$. \\
+\textbf{Ход:} Разбиваем угол. Зажимаем площадь между круговыми секторами с $m_k$ и $M_k$. Разность $S(T) - s(T) = \frac{1}{2} \sum (M_k - m_k)(M_k + m_k) \Delta \varphi_k$. \\
+\textbf{Трюк:} Ограниченность дает $(M_k + m_k) \le 2C$. Равномерная непрерывность (Кантор) дает колебание $(M_k - m_k) < \varepsilon$. \\
+\textbf{Финал:} Оценка разности $\le \varepsilon C (\beta - \alpha) \to 0$. Суммы сошлись, предел равен интегралу от $\frac{1}{2}\rho^2(\varphi)$.
+\end{tcolorbox}

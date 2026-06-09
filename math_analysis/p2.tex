@@ -53,6 +53,14 @@ $$ P(x) = X'(x)Q_2(x) - X(x) \left( \frac{Q'(x)}{Q_1(x)} - Q_2'(x) \right) + Y(x
     \item \textbf{Итог:} $\int \frac{dx}{(x^2-1)^2} = -\frac{x}{2(x^2-1)} - \frac{1}{4}\ln\left|\frac{x-1}{x+1}\right| + C$.
 \end{itemize}
 
+% --- Для Вопроса 6 (Остроградский) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Остроградский):} \\
+\textbf{Тезис:} $\int \frac{P}{Q} dx = \frac{X}{Q_1} + \int \frac{Y}{Q_2} dx$, где $Q_1 = \text{НОД}(Q, Q')$, $Q_2 = Q/Q_1$. \\
+\textbf{Ход доказательства:} Дифференцируем обе части и умножаем на $Q = Q_1 Q_2$. Получаем уравнение без знаменателей: $P = X'Q_2 - X \frac{Q_1' Q_2}{Q_1} + Y Q_1$. \\
+\textbf{Ключевой трюк:} Нужно доказать, что $\frac{Q_1' Q_2}{Q_1}$ — многочлен. Берем производную $Q' = (Q_1 Q_2)' = Q_1' Q_2 + Q_1 Q_2'$. Выражаем числитель: $Q_1' Q_2 = Q' - Q_1 Q_2'$. Делим на $Q_1$: $\frac{Q_1' Q_2}{Q_1} = \frac{Q'}{Q_1} - Q_2'$. Так как $Q_1 = \text{НОД}(Q, Q')$, дробь $\frac{Q'}{Q_1}$ делится нацело.
+\end{tcolorbox}
+
 % --- Вопрос 7 ---
 \examquestion{7}{Интегрирование дробно-линейных иррациональностей}
 {Опираясь на понятие рационализирующей подстановки, подробно разберите метод интегрирования выражений, содержащих дробно-линейные иррациональности вида $\sqrt[n]{\frac{ax+b}{cx+d}}$. Докажите теорему о сведении таких интегралов к интегралам от рациональных функций.}
@@ -80,6 +88,13 @@ $$ \int R\left(x, \sqrt[n]{\frac{ax+b}{cx+d}}\right) dx = \int R\left( \psi(t), 
 $$ \int \frac{2t\,dt}{(1+t^2) \cdot t} = 2 \int \frac{dt}{1+t^2} = 2 \arctan t + C $$
 Выполняя обратную замену $t = \sqrt{x}$, получаем окончательный ответ: $2 \arctan\sqrt{x} + C$.
 
+% --- Для Вопроса 7 (Дробно-линейные) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Дробно-линейные):} \\
+\textbf{Тезис:} Подстановка $t = \sqrt[n]{\frac{ax+b}{cx+d}}$ сводит интеграл к чисто рациональному. \\
+\textbf{Ход доказательства:} Возводим в $n$-ю степень: $t^n = \frac{ax+b}{cx+d}$. Умножаем на знаменатель и группируем $x$: $x(ct^n - a) = b - dt^n$. Отсюда $x = \frac{b - dt^n}{ct^n - a} = \psi(t)$. \\
+\textbf{Финал:} Так как $x = \psi(t)$ — отношение многочленов (рациональная дробь), то её производная $dx = \psi'(t)dt$ тоже рациональна. Итоговый интеграл $\int R(\psi(t), t)\psi'(t)dt$ избавлен от корней.
+\end{tcolorbox}
 
 
 
@@ -159,6 +174,13 @@ $$ dx = d\left(\frac{t^2-1}{2t}\right) = \frac{t^2+1}{2t^2}dt, \quad \sqrt{x^2+1
 $$ \int \frac{dx}{\sqrt{x^2+1}} = \int \frac{\frac{t^2+1}{2t^2} dt}{\frac{t^2+1}{2t}} = \int \frac{dt}{t} = \ln|t| + C = \ln\left|x + \sqrt{x^2+1}\right| + C $$
 
 
+% --- Для Вопроса 8 (Эйлер) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Подстановки Эйлера):} \\
+\textbf{Тезис:} Замена должна при возведении в квадрат уничтожить старший $ax^2$ или свободный $c$, чтобы $x$ выразился линейно. \\
+\textbf{1-я ($a>0$):} $\sqrt{ax^2+bx+c} = \sqrt{a}x + t \implies ax^2+bx+c = ax^2 + 2\sqrt{a}xt + t^2$. Слагаемое $ax^2$ уходит $\implies x(b-2\sqrt{a}t) = t^2-c \implies x = \frac{t^2-c}{b-2\sqrt{a}t}$. \\
+\textbf{2-я ($c>0$):} $\sqrt{ax^2+bx+c} = xt + \sqrt{c} \implies ax^2+bx+c = x^2t^2 + 2\sqrt{c}xt + c$. Слагаемое $c$ уходит, делим всё на $x$ $\implies a - t^2 x = 2\sqrt{c}t - b \implies x = \frac{2\sqrt{c}t-b}{a-t^2}$.
+\end{tcolorbox}
 
 
 % --- Вопрос 9 ---
@@ -203,6 +225,21 @@ $$1 + x^{1/3} = t^2 \implies x = (t^2-1)^3 \implies dx = 3(t^2-1)^2 \cdot 2t \, 
 Подставляем в $I$:
 $$ \int \frac{t}{(t^2-1)^3} \cdot 6t(t^2-1)^2 dt = 6 \int \frac{t^2}{t^2-1} dt = 6 \int \left(1 + \frac{1}{t^2-1}\right) dt = 6t + 3\ln\left|\frac{t-1}{t+1}\right| + C $$
 где $t = \sqrt{1+\sqrt[3]{x}}$.
+
+% --- Для Вопроса 9 (Чебышёв) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Бином Чебышёва):} \\
+\textbf{Тезис:} Интеграл берется только в 3 случаях (база: переход $z=x^n$). Считаем $\frac{m+1}{n}$ и $p=r/s$. \\
+\textbf{Ход (замены):} \\
+1. $p \in \mathbb{Z} \implies$ замена $x=t^{\lambda}$ ($\lambda = \text{НОК}$ знаменателей $m$ и $n$). \\
+2. $\frac{m+1}{n} \in \mathbb{Z} \implies$ перед скобкой целая степень, мешает только корень на самой скобке. Замена: $a+bx^n = t^s$. \\
+3. $\frac{m+1}{n}+p \in \mathbb{Z} \implies$ выносим $x^n$ из бинома: получаем $x^{m+np}(ax^{-n}+b)^p$. Новая степень стала целой, мешает новая скобка. Замена: $ax^{-n}+b = t^s$.
+\end{tcolorbox}
+
+
+
+
+
 
 
 % --- Вопрос 10 ---
@@ -256,3 +293,12 @@ $$ \int \frac{t}{(t^2-1)^3} \cdot 6t(t^2-1)^2 dt = 6 \int \frac{t^2}{t^2-1} dt =
 
 \paragraph{Бонус-пример (Функция Дирихле):}
 $\chi(x)$ на $[0, 1]$ равна $1$ (если $x \in \mathbb{Q}$) и $0$ (если $x \notin \mathbb{Q}$). Функция ограничена. Но предел $\sigma$ не существует: если брать $\xi_k$ только рациональными, $\sigma = 1$. Если иррациональными, $\sigma = 0$. Предел зависит от разметки $\implies$ интеграл не существует.
+
+% --- Для Вопроса 10 (Ограниченность Римана) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Необходимое условие Римана):} \\
+\textbf{Тезис:} Если $\exists \int_a^b f(x)dx = I$, то $f(x)$ ограничена. Доказываем от противного. \\
+\textbf{Подготовка:} Пусть неограничена. Для $\varepsilon=1$ при мелком разбиении $|\sigma| < |I|+1$. \\
+\textbf{Шаг 1:} Функция неограничена хотя бы на одном подотрезке $[x_{k-1}, x_k]$. Фиксируем все точки $\xi_i$, кроме $k$-й. Вся сумма кроме одного слагаемого становится константой $C$: $\sigma = f(\xi_k)\Delta x_k + C$. \\
+\textbf{Шаг 2 (Финал):} Выбираем $\xi_k$ так, чтобы высота улетела в космос: $|f(\xi_k)| > \frac{|I|+1+|C|}{\Delta x_k}$. Отсюда $|f(\xi_k)\Delta x_k| > |I|+1+|C|$. Оцениваем: $|\sigma| \ge |f(\xi_k)\Delta x_k| - |C| > |I|+1$. Противоречие с $|\sigma| < |I|+1$.
+\end{tcolorbox}

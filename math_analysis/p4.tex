@@ -34,6 +34,16 @@ $$ \lim_{\lambda(T)\to0} \sigma(\alpha f + \beta g, T, \xi) = \alpha \int_a^b f(
 $$ \int_a^b f(x) dx = \lim_{\lambda(T)\to0} \sigma(f, T, \xi) \ge 0 $$
 
 
+% --- Для Вопроса 16 (Линейность) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Линейность):} \\
+\textbf{Тезис:} $\int_a^b (\alpha f + \beta g) dx = \alpha \int_a^b f dx + \beta \int_a^b g dx$. \\
+\textbf{Ход:} Записываем интегральную сумму: $\sigma(\alpha f + \beta g, T, \xi) = \sum (\alpha f(\xi_i) + \beta g(\xi_i)) \Delta x_i$. \\
+\textbf{Алгебра сумм:} Раскрываем скобки $\implies \alpha \sum f(\xi_i)\Delta x_i + \beta \sum g(\xi_i)\Delta x_i = \alpha \sigma_f + \beta \sigma_g$. \\
+\textbf{Переход к пределу:} По теореме о сумме пределов, предел при $\lambda(T) \to 0$ равен сумме пределов $\implies \alpha I_f + \beta I_g$. \\
+\textbf{Сохранение знака:} Если $f(x) \ge 0$, то $\sigma_f \ge 0$ (сумма площадей прямоугольников с положит. высотой). Предел неотрицательной последовательности $\ge 0 \implies I \ge 0$.
+\end{tcolorbox}
+
 % --- Вопрос 17 ---
 \examquestion{17}{Аддитивность интеграла по промежутку}
 {Сформулируйте и докажите теорему об аддитивности определенного интеграла. Проработайте обе стороны критерия (необходимость и достаточность) через аппарат сумм Дарбу или интегральных сумм.}
@@ -78,6 +88,17 @@ $$ S(T) - s(T) = (S(T_1) - s(T_1)) + (S(T_2) - s(T_2)) < \frac{\varepsilon}{2} +
 \end{proof}
 
 
+% --- Для Вопроса 17 (Аддитивность) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Аддитивность):} \\
+\textbf{Тезис:} $\int_a^c f dx = \int_a^b f dx + \int_b^c f dx$. \\
+\textbf{Ход:} Выбираем специальное разбиение $T$ такое, что точка $b$ — обязательный узел разбиения. \\
+\textbf{Разбиение:} $T_1 = \{x_0, \dots, b\}$ для $[a,b]$ и $T_2 = \{b, \dots, x_n\}$ для $[b,c]$. \\
+\textbf{Сумма:} $\sigma(T) = \sum_{x_i \le b} f(\xi_i)\Delta x_i + \sum_{x_i > b} f(\xi_i)\Delta x_i = \sigma(T_1) + \sigma(T_2)$. \\
+\textbf{Финал:} При $\lambda \to 0$ обе части стремятся к своим интегралам, сумма остается равенством.
+\end{tcolorbox}
+
+
 % --- Вопрос 18 ---
 \examquestion{18}{Свойства-неравенства для определенного интеграла}
 {Сформулируйте и строго докажите теорему об оценке модуля интеграла через интеграл от модуля. Докажите также вспомогательное утверждение: если $f\in\mathcal{R}[a,b]$, то и $|f|\in\mathcal{R}[a,b]$.}
@@ -117,6 +138,14 @@ $$ \left| \sigma(f, T, \xi) \right| = \left| \sum_{i=1}^n f(\xi_i)\Delta x_i \ri
 $$ \left| \int_a^b f(x) dx \right| \le \int_a^b |f(x)| dx $$
 \end{proof}
 
+% --- Для Вопроса 18 (Монотонность) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Монотонность):} \\
+\textbf{Тезис:} Если $f(x) \le g(x)$ на $[a,b]$, то $\int_a^b f dx \le \int_a^b g dx$. \\
+\textbf{Доказательство:} Рассмотрим $h(x) = g(x) - f(x)$. По условию $h(x) \ge 0$. \\
+\textbf{Следствие:} Из доказанного ранее свойства "сохранения знака" (вопрос 16) имеем $\int_a^b h(x) dx \ge 0$. \\
+\textbf{Финал:} В силу линейности $\int_a^b (g - f) dx = \int_a^b g dx - \int_a^b f dx \ge 0$, откуда $\int_a^b g dx \ge \int_a^b f dx$.
+\end{tcolorbox}
 
 % --- Вопрос 19 ---
 \examquestion{19}{Первая теорема о среднем значении}
@@ -156,6 +185,19 @@ $$ m \le \frac{1}{b - a} \int_a^b f(x) dx \le M $$
 5. По теореме Коши о промежуточном значении, непрерывная функция $f(x)$ обязана принимать любое значение между своим минимумом и максимумом. Значит, существует точка $\xi \in [a, b]$, в которой $f(\xi) = \mu$.
 6. Подставив $f(\xi)$ в формулу, получаем: $\int_a^b f(x) dx = f(\xi)(b - a)$.
 \end{proof}
+
+
+% --- Для Вопроса 19 (Оценка интеграла) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Оценка):} \\
+\textbf{Тезис:} $m(b-a) \le \int_a^b f(x) dx \le M(b-a)$, где $m, M$ — глобальные inf/sup. \\
+\textbf{Ход:} Для любого разбиения $m \le f(\xi_i) \le M$. \\
+\textbf{Суммирование:} $m \Delta x_i \le f(\xi_i) \Delta x_i \le M \Delta x_i$. Суммируем по всем $i$: \\
+$m \sum \Delta x_i \le \sigma \le M \sum \Delta x_i$. \\
+\textbf{Финал:} Так как $\sum \Delta x_i = b-a$, получаем $m(b-a) \le \sigma \le M(b-a)$. Предельный переход сохраняет неравенства.
+\end{tcolorbox}
+
+
 
 % --- Вопрос 20 ---
 \examquestion{20}{Обобщенная теорема о среднем}
@@ -214,3 +256,14 @@ $$ \int_{-1}^{1} g(x)dx = \int_{-1}^{1} x dx = \left[ \frac{x^2}{2} \right]_{-1}
 3. Подставляем в формулу теоремы:
 $$ \frac{2}{3} = \mu \cdot 0 \implies \frac{2}{3} = 0 $$
 Абсурд. Без жесткого условия знакопостоянства теорема ложна.
+
+
+% --- Для Вопроса 20 (Теорема о среднем) ---
+\begin{tcolorbox}[colback=gray!5, colframe=black, boxrule=0.5pt, arc=0pt]
+\textbf{Резюмируем (Теорема о среднем):} \\
+\textbf{Тезис:} $\exists \xi \in [a,b]: \int_a^b f(x) dx = f(\xi)(b-a)$. \\
+\textbf{Ход:} 1) Из оценки (вопрос 19) делим на $(b-a)$: $m \le \frac{1}{b-a} \int_a^b f(x) dx \le M$. \\
+2) Пусть $\mu = \frac{1}{b-a} \int_a^b f(x) dx$. Число $\mu$ лежит между min и max функции. \\
+3) По теореме Коши (о промежуточном значении непрерывной функции), $\exists \xi$, что $f(\xi) = \mu$. \\
+4) Умножаем обратно на $(b-a)$ — готово.
+\end{tcolorbox}

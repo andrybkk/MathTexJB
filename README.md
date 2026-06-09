@@ -1,8 +1,13 @@
-**MathJBExam.pdf** - proofs
- 
-**MatTasks.pdf** - tasks
 
-**Minimum.pdf** - min
+## **MathJBExam.pdf** - proofs 
+
+## **MatTasks.pdf** - tasks
+
+## **Minimum.pdf** - min
+
+added new tasks
+
+added resume in every question
 
 check it out
 
