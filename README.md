@@ -1,6 +1,6 @@
 **MathJBExam.pdf** - proofs
  
-**Matan_tasks.pdf** - tasks
+**MatTasks.pdf** - tasks
 
 **Minimum.pdf** - min
 
