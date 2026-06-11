@@ -1,13 +1,17 @@
+diffuri v ume... here we go again...
+
+## **LinJBExam.pdf** - proofs 
+
+## **LinalTasks.pdf** - tasks
+
+## **Linal_Minimum.pdf** - min
+
+
+old staff:
 
 ## **MathJBExam.pdf** - proofs 
-
 ## **MatTasks.pdf** - tasks
-
 ## **Minimum.pdf** - min
-
-added new tasks
-
-added resume in every question
 
 check it out
 
